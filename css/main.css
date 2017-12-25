@@ -1,6 +1,6 @@
 @font-face {
   font-family: beyno;
-  src: url("fonts/BEYNO.ttf"); }
+  src: url("BEYNO.ttf"); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -21,7 +21,42 @@ a.navbar-brand {
   font-family: beyno; }
 
 #carousel {
-  height: 800px; }
+  height: 100vh; }
+  #carousel img {
+    -o-object-fit: cover;
+    object-fit: cover; }
+  #carousel .carousel_text {
+    position: absolute;
+    margin: auto;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center; }
+    #carousel .carousel_text h1 {
+      font-size: 64px;
+      font-weight: bold;
+      margin-bottom: 20px; }
+      #carousel .carousel_text h1 span:nth-child(1) {
+        color: white; }
+      #carousel .carousel_text h1 span:nth-child(2) {
+        color: #fff200; }
+    #carousel .carousel_text p {
+      margin-top: 20px;
+      font-size: 16px;
+      color: white;
+      max-width: 800px;
+      line-height: 40px; }
+
+.carousel-inner img {
+  height: 100vh; }
 
 #home {
   height: 800px;
