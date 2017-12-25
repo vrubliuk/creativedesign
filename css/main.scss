@@ -1,525 +1,68 @@
-//COLORS
-$bgcolor: #282c34;
-
-* {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: $greycolor;
-    outline: none !important;
+﻿* {
     box-sizing: border-box;
+    // outline: none !important;
+    font-family: 'Lato', sans-serif;
 }
 
-
-html,
 body {
+    position: relative; 
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: $bgcolor;
     &:focus {
         outline: none !important;
         outline: 0;
     }
 }
 
-a,
-a:hover,
-a:visited {
-    color: inherit;
-    text-decoration: none !important;
-}
+// a,
+// a:hover,
+// a:visited {
+//     color: inherit;
+//     text-decoration: none !important;
+// }
 
-::selection {
-    color: whitesmoke;
-    background: rgba(97, 175, 239, 0.996); // rgba for Chrome
-}
-
-#container {
-    height: 100%;
-    width: 100%;
-}
-
-// MENU PANEL
-#panelMenu {
-    width: 25%;
-    width: 450px;
-    height: 100%;
-    float: left;
-    background-color: $bgcolordarker;
-}
-
-.accordion {
-    background-color: $bgcolordarker;
-    color: $greycolor;
-    color: $bluecolor;
-    cursor: pointer;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    transition: 0.4s;
+.navbar-brand {
     text-transform: uppercase;
-    &:hover {
-        background-color: $bgcolorlighter;
-    }
 }
 
-.accordion:first-child {
-    color: $orangecolor;
-}
 
-button.accordion:after {
-    content: "\25BE";
-    color: $bluecolor;
-    float: right;
-    margin-left: 5px;
-}
 
-.accordion:first-child:after {
-    color: $orangecolor;
-}
-
-button.accordion.active:after {
-    content: "\25B4";
-}
-
-div.accordionPanel {
-    background-color: $bgcolordarker;
-    user-select: none;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    div.phraseContainer {
-        height: 30px;
-        padding: 5px;
-        padding-left: 15px;
-        &:hover {
-            background-color: $bgcolorlighter;
-        }
-        span.phrase {
-            font-size: 16px;
-            margin-left: 5px;
-        }
-        button.quickCopy {
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: -1px;
-            margin-right: 14px;
-            outline: 0 !important;
-            line-height: 20px;
-            float: right;
-            background-color: $orangecolor;
-            transform: skew(-20deg);
-            .quickCopyText {
-                color: whitesmoke;
-                display: inline-block;
-                transform: skew(20deg);
-            }
-        }
-    }
-    div.email {
-        padding: 5px;
-        padding-left: 20px;
-        height: 30px;
-        cursor: pointer;
-        &:hover {
-            background-color: $bgcolorlighter;
-        }
-    }
-}
-
-//WORKING PANEL
-#panelWorking {
-    margin-left: 450px;
-    height: 100%;
-    padding: 42px;
-}
-
-#panelWorkingContainer {
+header {
     display: block;
-    width: 1080px;
-    margin: auto;
-    user-select: none;
-    position: relative;
+    height: 70px;
+    
+
+  
+    border: solid 1px red;
 }
 
-#sectionButton {
-    border-bottom: solid 10px $purplecolor;
-    font-size: 0;
-    height: 62px;
+
+#carousel {
+    height: 800px;
+
 }
 
-#buttonsFinal {
-    float: left;
+
+
+#home {
+    height: 800px;
+    padding-top:70px
 }
 
-.buttonFinal {
-    height: 42px;
-    width: 266px;
-    border: none;
-    background-color: $bluecolor;
-    color: whitesmoke;
-    cursor: pointer;
-    font-size: 20px;
-    vertical-align: top;
-    margin-left: 8px;
+#products {
+    height: 800px;
+    padding-top:70px
 }
 
-#buttonCopyMessage {
-    background-color: $orangecolor;
-    margin-left: 10px;
+#about {
+    height: 800px;
+    padding-top:70px
 }
 
-#buttonsTextarea {
-    float: right;
-}
 
-.buttonSwitchTextarea {
-    height: 52px;
-    width: 266px; 
-    border: none;
-    color: whitesmoke;
-    cursor: pointer; 
-    font-size: 20px;
-    span {
-        position: relative;
-        top: -5px;
-    }
-}
-
-#buttonShowBody {
-    background-color: $purplecolor;
-}
-
-#buttonShowSignature {
-    background-color: $bgcolordarker;
-    margin-left: -10px;
-    span {
-        color: whitesmoke;
-    }
-}
-
-.parallelogram {
-    transform: skew(-20deg);
-}
-
-.skew-fix {
-    color: whitesmoke;
-    display: inline-block;
-    transform: skew(20deg);
-}
-
-#subjectContainer {
-    position: relative;
-    padding: 10px;
-    padding-bottom: 0;
-    background-color: $bgcolordarker;
-    user-select: none;
-    #subjectTitle {
-        padding-left: 5px;
-        line-height: 30px;
-        width: 250px;
-        font-size: 22px;
-        float: left;
-    }
-    #subjectValue {
-        display: block;
-        padding-left: 10px;
-        font-size: 22px;
-        #subject {
-            line-height: 30px;
-            padding-left: 5px;
-            height: 30px;
-            border: none;
-            background-color: $bgcolorlighter;
-            font-size: 22px;
-            display: block;
-            width: 250px;
-        }
-    }
-}
-
-#textareaContainer {
-    background-color: $bgcolordarker;
-    margin-bottom: 42px;
-    position: relative;
-    padding: 10px;
-}
-
-#textarea {
-    font-size: 22px;
-    display: block;
-    border: none;
-    background-color: $bgcolorlighter;
-    resize: none;
-    width: 100%;
-    height: 226px;
-    padding: 5px;
-    overflow: hidden; 
-}
-
-#subjectCover,
-#textareaCover,
-#textareaCover2 { 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-
-#textarea2 {
-    display: none;
-    font-size: 22px;
-    border: none;
-    background-color: $bgcolorlighter;
-    resize: none;
-    width: 100%;
-    height: 266px;
-    padding: 5px;
-    overflow: hidden;
-}
-
-#lockButton {
-    position: absolute;
-    font-size: 20px;
-    border: none;
-    background-color: transparent;
-    height: 40px;
-    width: 40px;
-    margin-top: -40px;
-    right: 10px;
-    #lockIcon {
-        display: inline-block;
-        width: 100%;
-        color: $greencolor;
-    }
-}
-
-#optionsTitle {
-    border-bottom: solid 10px $cyancolor;
-    height: 62px;
-    #buttonOptionsTitle {
-        margin-left: -10px;
-        float: right;
-        height: 52px;
-        width: 266px;
-        background-color: $cyancolor;
-        border: none;
-        color: whitesmoke;
-        font-size: 20px;
-        span {
-            position: relative;
-            top: -5px;
-            color: whitesmoke;
-        }
-    }
-    #buttonFake {
-        height: 52px;
-        border: none;
-        width: 30px;
-        float: right;
-        background-color: $bgcolor;
-    }
-}
-
-#sectionOptions {
-    font-size: 18px;
-    line-height: 40px;
-    background-color: $bgcolordarker;
-    padding-left: 15px;
-    padding-right: 15px; 
-}
-
-.rowOptions {
-    display: none;
-    &:first-child {
-        padding-top: 5px;
-    }
-    &:last-child {
-        padding-bottom: 5px;
-    }
-}
-
-.rowLabel {
-    display: inline-block;
-    width: 250px;
-}
-
-.inputText {
-    background-color: $bgcolorlighter;
-    border: none;
-    height: 30px;
-    padding: 5px;
-    font-size: 18px;
-    width: 250px;
-}
-
-//SWITCH
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 46px;
-    height: 26px;
-    vertical-align: middle;
-}
-
-.switch input {
-    display: none;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    background-color: $bgcolorlighter;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    background-color: $greycolor;
-    transition: .4s;
-}
-
-input:checked+.slider {
-    background-color: $bluecolor;
-}
-
-input:checked+.slider:before {
-    background-color: white;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px $bluecolor;
-}
-
-input:checked+.slider:before {
-    transform: translateX(20px);
-}
-
-.slider.round {
-    border-radius: 30px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-//CHECKBOX
-.containerCheckbox {
-    display: inline-block;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.containerCheckbox:not(:first-child):not(:nth-child(2)) {
-    margin-left: 20px;
-}
-
-.containerCheckbox input {
-    position: absolute;
-    opacity: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #ccc;
-    background-color: $bgcolorlighter;
-    border-radius: 50%;
-}
-
-.containerCheckbox input:checked~.checkmark {
-    background-color: $bluecolor;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.containerCheckbox input:checked~.checkmark:after {
-    display: block;
-}
-
-.containerCheckbox .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-//SNACKBAR
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    color: whitesmoke;
-    text-align: center;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-}
-
-#snackbar.snackbarShow {
-    visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 1s;
-}
-
-.snackbargreen {
-    background-color: $greencolor;
-}
-
-.snackbarred {
-    background-color: $redcolor;
-}
-
-@keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-    to {
-        bottom: 30px;
-        opacity: 1;
-    }
-}
-
-@keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
-    to {
-        bottom: 0;
-        opacity: 0;
-    }
+#contact {
+    height: 800px;
+    padding-top:70px
 }
