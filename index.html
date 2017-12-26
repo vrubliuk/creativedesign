@@ -8,27 +8,37 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
     <link href="css/main.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-    
+        <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
     <script src="javascript/main-dist.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-
-    
-    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top container justify-content-between">
-
-        <a class="navbar-brand" href="#">UPQODE</a>
-
-        <ul class="navbar-nav justify-content-end">
+<header class="container-fluid fixed-top" >
+    <nav class="navbar navbar-expand-md  navbar-light container fixed-top">
+        <a class="navbar-brand" href="#"><span>UP</span><span>QODE</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="#home">Home</a>
+                <div class="submenu1">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#products">Products</a>
@@ -38,19 +48,22 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            </li>  
+            <li class="nav-item">
+               
+                  <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Search for...">
+                        <span class="input-group-btn">
+                          <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
+                      </div>
+            </li> 
 
-            <li>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </li>
-
-        </ul>
-
-
-    </nav>
+          </ul>
+        </div>  
+      </nav>
+</header>
+ 
 
     <div id="carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -108,9 +121,6 @@
 
     <div id="home" class="container">
         <h1 class="text-center">Why choose us</h1>
-
-
-
 
 
     </div>

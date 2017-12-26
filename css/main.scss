@@ -3,9 +3,21 @@
     src: url('BEYNO.ttf');
 }
 
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
 * {
     box-sizing: border-box; // outline: none !important;
     font-family: 'Lato', sans-serif;
+    &:focus {
+        outline: none !important;
+        outline: 0;
+      }
 }
 
 body {
@@ -14,15 +26,109 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    &:focus {
-        outline: none !important;
-        outline: 0;
-    }
+   
+}
+
+header {
+    // border: solid 5px #009dda;
+    height: 73px;
+    background-color: white;
+ 
+}
+
+.navbar {
+    // height: 70px;
+    background-color: white !important;
 }
 
 a.navbar-brand {
-    font-family: beyno;
+    
+  
+    font-size: 30px;
+    span:nth-child(1) {
+        color: #503392;
+        font-family: beyno;
+    }
+    span:nth-child(2) {
+        color: #009dda;
+        font-family: beyno;
+    }
+
 }
+
+
+.nav-item {
+    font-size: 16px;
+    margin-right: 30px;
+
+    .form-control {
+        border-radius: 0;
+        background-color: #e8e4f1;
+        border: none;
+        padding: 0 10px;
+        vertical-align: middle;
+    }
+
+    .btn {
+        // background-color: #009dda;
+        background-color: #e8e4f1;
+        // border-color: #009dda;
+        // border: #e8e4f1;
+        border: none;
+        border-radius: 0;
+        color: #5b5b5b;
+        cursor: pointer;
+        outline: none;
+        
+    }
+    &:hover .submenu1 {
+        display: block;
+    }
+
+}
+.nav-item:last-child {
+    margin-right: 0px;
+}
+
+
+.submenu1 {
+    margin-top: 16px;
+    border-top: solid 2px #fff200;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: absolute;
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 770px) { 
+    .submenu1 {
+        margin-top: 0;
+        position: relative;
+        border: none;
+        background-color: white;
+        margin-left: 20px;
+
+        a {
+       
+            color: grey;
+        
+        }
+
+    }
+}
+    
+
+
+
+
+
+
+
 
 #carousel {
     // padding-top: 70px;
