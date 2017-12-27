@@ -143,15 +143,145 @@ a.navbar-brand {
     // width: 100%;
     height: 100vh;
 }
+.carousel-indicators li {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
 
-#home {
-    height: 800px;
-    padding-top: 70px;
 }
 
-#products {
-    height: 800px;
+.carousel-control-container {
+      background-color: rgba(255, 255, 255, 0.3);
+      display:flex;
+      padding: 30px;
+}
+
+
+// HOME SECTION
+#home {
     padding-top: 70px;
+    h1 {
+        color: #009dda;
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+            color: black;
+        }
+    }
+}
+.home-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1140px) {
+    .home-flex-container {
+        flex-direction: column;
+    }
+}
+
+.home-card-container {
+    position: relative;
+    margin: 10px 0;
+    min-width: 200px;
+    max-width: 200px;
+    height: 275px;
+    border: 1px solid grey;
+    .home-card-container-main-image {
+        margin: auto;
+        display: block;
+        margin-top: 30px;
+    }
+    & > h5 {
+        margin-top: 30px;
+    }
+    & > p {
+        margin-top: 30px;
+    }
+}
+
+.home-card-container:hover .home-card-container-overlay {
+    height: 160px;
+}
+
+.home-card-container-overlay {
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+    background-color: #503392;
+    color: white;
+    h5 {
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+    a {
+        margin: 5px;
+    }
+}
+
+
+
+
+
+
+
+#products {
+    // border: solid 5px green;
+    position: relative;
+    padding-top: 70px;
+    .products-title-container {
+        
+        top: 1;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 99;
+        height: 161px;
+        background: url('../images/overlay1.png') no-repeat center ; 
+        h1 {
+            padding-top: 35px;
+            color: #fff200;
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+              
+                color:white;
+            }
+        }
+
+
+
+    }
+    .carousel-indicators li {
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background-color: lightgrey;
+    
+    }
+    li.active {
+        background-color: #503392 !important;
+    }
+
+    #carousel_outer_container {
+        position: relative;
+    }
+
+    .carousel_inner_container {
+        position: absolute;
+        border: solid 5px red;
+        width: 100%;
+        height: 100%;
+    }
+
+   
 }
 
 #about {
