@@ -19,6 +19,12 @@
         outline: 0;
       }
 }
+// a,
+//  a:hover,
+//  a:visited {
+//    color: inherit;
+//    text-decoration: none !important;
+//  }
 
 body {
     position: relative;
@@ -81,52 +87,11 @@ a.navbar-brand {
         outline: none;
         
     }
-    &:hover .submenu1 {
-        display: block;
-    }
-
+  
 }
 .nav-item:last-child {
     margin-right: 0px;
 }
-
-
-.submenu1 {
-    margin-top: 16px;
-    border-top: solid 2px #fff200;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: none;
-    position: absolute;
-    a {
-        display: block;
-        color: white;
-        text-decoration: none;
-    }
-}
-
-
-@media (max-width: 770px) { 
-    .submenu1 {
-        margin-top: 0;
-        position: relative;
-        border: none;
-        background-color: white;
-        margin-left: 20px;
-
-        a {
-       
-            color: grey;
-        
-        }
-
-    }
-}
-    
-
-
-
-
-
 
 
 

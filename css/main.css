@@ -49,32 +49,9 @@ a.navbar-brand {
     color: #5b5b5b;
     cursor: pointer;
     outline: none; }
-  .nav-item:hover .submenu1 {
-    display: block; }
 
 .nav-item:last-child {
   margin-right: 0px; }
-
-.submenu1 {
-  margin-top: 16px;
-  border-top: solid 2px #fff200;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
-  position: absolute; }
-  .submenu1 a {
-    display: block;
-    color: white;
-    text-decoration: none; }
-
-@media (max-width: 770px) {
-  .submenu1 {
-    margin-top: 0;
-    position: relative;
-    border: none;
-    background-color: white;
-    margin-left: 20px; }
-    .submenu1 a {
-      color: grey; } }
 
 #carousel {
   height: 100vh; }
