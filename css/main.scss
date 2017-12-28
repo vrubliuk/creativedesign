@@ -256,7 +256,6 @@ a.navbar-brand {
 
 // PRODUCTS SECTION
 
-
 #products {
     padding: 0;
     .products-padding {
@@ -284,6 +283,7 @@ a.navbar-brand {
         // position: absolute;
         // z-index: 99;
         height: 161px;
+        
         background: url('../images/overlay1.png') no-repeat center ; 
         h1 {
             padding-top: 35px;
@@ -310,57 +310,51 @@ a.navbar-brand {
         background-color: #503392 !important;
     }
 
-    // #carousel_outer_container {
-    //     position: relative;
-    // }
-
-    // .carousel_inner_container {
-    //     position: absolute;
-    //     border: solid 5px red;
-    //     width: 100%;
-    //     height: 100%;
-    // }
     .products-main-content {
         
-        // border: solid 5px red;
     min-height: 679px;
-    // padding-top: 161px;
     position: relative;
     }
-    // #carouselContent {
-    //     min-height: 679px;
-    // }
+
     .carousel-item {
-        border: solid 1px red;
         min-height: 679px;
-        
     }
-    .products-flex-container {
-        display: flex;
-        justify-content: stretch;
-        align-items: center;
-    }
-    .products-tile-outer-container {
-        border: solid 1px blue;
+    .products-grid-container {
+        min-height: 631px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: auto auto auto;
+        align-content: center;
+        border: solid 1px red;
+        padding: 0;
+        grid-row-gap: 50px;
     }
 
+    @media screen and (max-width: 1140px) {
+        .products-grid-container  {
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+        .products-tile-container:last-child {
+            margin-bottom: 35px;
+        }
+    }
 
     .products-tile-container {
         border: solid 1px grey;
         width: 350px;
         height: 150px;
-
-
+        display: inline-block;
+        min-width: 350px;
         img {
             height: 145px;
             width: 145px;
+            float: left;
         }
-    }
-
-   
-    
-    
-   
+        div {
+            margin-left:170px;
+        }
+    }  
 }
 
 #about {
@@ -368,7 +362,156 @@ a.navbar-brand {
     padding-top: 70px;
 }
 
+// CONTACT SECTION
 #contact {
-    height: 800px;
+    padding: 0;
     padding-top: 70px;
+    h1 {
+        font-size: 35px !important;
+        margin-top: 35px;
+        margin-bottom: 22px;
+        color: #009dda;
+        text-transform: uppercase;
+        font-weight: bold;
+        span {
+            color: #232323;
+        }
+    }
+    & > p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 14px;
+        color: #999999;
+        line-height: 24px;
+        margin-bottom: 72px;
+    } 
+}
+.map-container {
+    position: relative;
+}
+
+
+
+#map {
+    min-height: 600px;
+    
+}
+::placeholder {
+    color: white;
+}
+#form-container {
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color: white;
+    form {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    input[type=text] {
+        border: 1px solid white;
+        background-color: transparent;
+        padding: 10px;
+        color: white;
+    }
+    input[name=emails] {
+        border: 1px solid white;
+        background-color: transparent;
+        padding: 10px;
+        color: white;
+    }
+    textarea {
+        border: 1px solid white;
+        background-color: transparent;
+        overflow: hidden;
+        color: white;
+        padding: 10px;
+        resize: none;
+    }
+
+    input[type=submit] {
+        border: none;
+        background-color: yellow;
+        padding: 10px;
+        float: right;
+    }
+
+    & > div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+
+
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+  
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* On mouse-over, add a grey background color */
+// .checkbox-container:hover input ~ .checkmark {
+//     background-color: white;
+// }
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
