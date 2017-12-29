@@ -5,26 +5,20 @@
 
 @mixin clearfix() {
     &::after {
-      display: block;
-      content: "";
-      clear: both;
+        display: block;
+        content: "";
+        clear: both;
     }
-  }
+}
 
 * {
-    box-sizing: border-box; // outline: none !important;
+    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     &:focus {
         outline: none !important;
         outline: 0;
-      }
+    }
 }
-// a,
-//  a:hover,
-//  a:visited {
-//    color: inherit;
-//    text-decoration: none !important;
-//  }
 
 body {
     position: relative;
@@ -33,40 +27,32 @@ body {
     height: 100%;
     width: 100%;
     min-width: 400px;
-    overflow-x: hidden; 
-   
+    overflow-x: hidden;
 }
+
 @media screen and (max-width: 420px) {
     body {
-        overflow-x: auto; 
+        overflow-x: auto;
     }
- 
 }
 
-
-
-
 header {
-    // border: solid 5px #009dda;
     height: 73px;
     background-color: white;
     padding: 0 !important;
 }
+
 @media screen and (max-width: 1024px) {
     header {
         padding: 0 !important;
     }
- 
 }
 
 .navbar {
-    // height: 70px;
     background-color: white !important;
 }
 
 a.navbar-brand {
-    
-  
     font-size: 30px;
     span:nth-child(1) {
         color: #503392;
@@ -76,19 +62,14 @@ a.navbar-brand {
         color: #009dda;
         font-family: beyno;
     }
-
 }
-
 
 .nav-item {
     font-size: 16px;
     margin-right: 30px;
     a.active {
-            color: #232323 !important;  
+        color: #232323 !important;
     }
-
-
-
     .form-control {
         border-radius: 0;
         background-color: #e8e4f1;
@@ -96,37 +77,27 @@ a.navbar-brand {
         padding: 0 10px;
         vertical-align: middle;
     }
-
     .btn {
-        // background-color: #009dda;
-        background-color: #e8e4f1;
-        // border-color: #009dda;
-        // border: #e8e4f1;
+        background-color: #e8e4f1; 
         border: none;
         border-radius: 0;
         color: #5b5b5b;
         cursor: pointer;
         outline: none;
-        
     }
-  
 }
+
 .nav-item:last-child {
     margin-right: 0px;
 }
 
-
-
 #carousel {
-    // padding-top: 70px;
     height: 100vh;
     img {
         object-fit: cover;
     }
     .carousel_text {
-        // border: 10px solid red;
         position: absolute;
-     
         margin: auto;
         bottom: 50%;
         left: 0;
@@ -138,7 +109,6 @@ a.navbar-brand {
         align-content: center;
         text-align: center;
         h1 {
-          
             font-size: 64px;
             font-weight: bold;
             margin-bottom: 20px;
@@ -149,8 +119,7 @@ a.navbar-brand {
                 color: #fff200;
             }
         }
-        p  {
-           
+        p {
             margin-top: 20px;
             font-size: 16px;
             color: white;
@@ -158,26 +127,23 @@ a.navbar-brand {
             line-height: 40px;
         }
     }
-
 }
 
 .carousel-inner img {
-    // width: 100%;
     height: 100vh;
 }
+
 .carousel-indicators li {
     height: 14px;
     width: 14px;
     border-radius: 50%;
-
 }
 
 .carousel-control-container {
-      background-color: rgba(255, 255, 255, 0.3);
-      display:flex;
-      padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    padding: 30px;
 }
-
 
 // HOME SECTION
 #home {
@@ -193,7 +159,7 @@ a.navbar-brand {
             color: #232323;
         }
     }
-    & > p {
+    &>p {
         max-width: 700px;
         margin: auto;
         font-size: 14px;
@@ -202,6 +168,7 @@ a.navbar-brand {
         margin-bottom: 72px;
     }
 }
+
 .home-flex-container {
     display: flex;
     flex-direction: row;
@@ -229,34 +196,29 @@ a.navbar-brand {
         width: 60px;
         height: 60px;
     }
-    &:nth-child(1) > .home-card-container-main-image {
+    &:nth-child(1)>.home-card-container-main-image {
         background: url('../images/home1.png') no-repeat center;
     }
-    &:nth-child(2) > .home-card-container-main-image {
+    &:nth-child(2)>.home-card-container-main-image {
         background: url('../images/home2.png') no-repeat center;
     }
-    &:nth-child(3) > .home-card-container-main-image {
+    &:nth-child(3)>.home-card-container-main-image {
         background: url('../images/home3.png') no-repeat center;
     }
-    &:nth-child(4) > .home-card-container-main-image {
+    &:nth-child(4)>.home-card-container-main-image {
         background: url('../images/home4.png') no-repeat center;
     }
-    &:nth-child(5) > .home-card-container-main-image {
+    &:nth-child(5)>.home-card-container-main-image {
         background: url('../images/home5.png') no-repeat center;
     }
-
-
-
-
-    & > h5 {
+    &>h5 {
         margin-top: 45px;
         font-size: 14px !important;
         font-weight: bold;
         text-transform: uppercase;
         color: #232323;
     }
-    & > p {
-        
+    &>p {
         color: #373737;
         font-size: 14px !important;
         line-height: 20px;
@@ -272,13 +234,13 @@ a.navbar-brand {
 
 .home-card-container-overlay {
     position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 0px;
-  transition: .5s ease;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    transition: .5s ease;
     background-color: #503392;
     color: white;
     h5 {
@@ -294,71 +256,47 @@ a.navbar-brand {
     }
 }
 
-
-
-
 // PRODUCTS SECTION
-
 #products {
     padding: 0;
     .products-padding {
-        
         height: 70px;
     }
     .products-main {
-        background: url('../images/noise.png') no-repeat; 
+        background: url('../images/noise.png') no-repeat;
         background-size: cover;
         min-height: 840px;
         width: 100%;
         margin: 0;
         position: relative;
         height: 100%;
-        // border: solid 5px red;
     }
-
-
-
     .products-main-title-container {
-        // border: solid 5px red;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // position: absolute;
-        // z-index: 99;
         height: 161px;
-        
-        background: url('../images/overlay1.png') no-repeat center ; 
+        background: url('../images/overlay1.png') no-repeat center;
         h1 {
             padding-top: 35px;
             color: #fff200;
             text-transform: uppercase;
             font-weight: bold;
             span {
-              
-                color:white;
+                color: white;
             }
         }
-
-
-
     }
     .carousel-indicators li {
         height: 14px;
         width: 14px;
         border-radius: 50%;
         background-color: lightgrey;
-    
     }
     li.active {
         background-color: #503392 !important;
     }
-
     .products-main-content {
-        
-    min-height: 679px;
-    position: relative;
+        min-height: 679px;
+        position: relative;
     }
-
     .carousel-item {
         min-height: 679px;
     }
@@ -368,14 +306,12 @@ a.navbar-brand {
         justify-content: space-between;
         grid-template-columns: auto auto auto;
         align-content: center;
-        // border: solid 1px red;
         padding: 0;
         grid-row-gap: 50px;
         margin-top: -21px;
     }
-
     @media screen and (max-width: 1024px) {
-        .products-grid-container  {
+        .products-grid-container {
             grid-template-columns: auto;
             justify-content: center;
         }
@@ -383,9 +319,7 @@ a.navbar-brand {
             margin-bottom: 35px;
         }
     }
-
     .products-tile-container {
-        // border: solid 1px grey;
         width: 350px;
         height: 150px;
         display: inline-block;
@@ -397,7 +331,7 @@ a.navbar-brand {
         }
         div {
             margin-top: 20px;
-            margin-left:170px;
+            margin-left: 170px;
             text-align: left;
             h3 {
                 font-size: 24px;
@@ -408,52 +342,38 @@ a.navbar-brand {
             h6 {
                 font-size: 16px;
                 color: #503392;
-
             }
             p {
                 font-size: 14px;
                 color: #373737;
                 line-height: 24px;
             }
-
         }
-        
-    }  
+    }
 }
-
-
-
-
 
 // ABOUT SECTION
 #about {
     height: 820px;
     padding-top: 70px;
     font-size: 0;
-    // padding-left: 15px;
-    // padding-right: 15px;
     .about-left {
-    //     padding-left: 15px;
-    // padding-right: 15px;
         vertical-align: top;
         display: inline-block;
         width: 50%;
         font-size: 13px;
-        // border: 1px solid rosybrown;
         h1 {
             font-size: 35px !important;
             margin-top: 40px;
             margin-bottom: 22px;
-         
             color: #232323;
             text-transform: uppercase;
             font-weight: bold;
             span {
-               
                 color: #009dda;
             }
         }
-        & > p {
+        &>p {
             max-width: 700px;
             margin: auto;
             font-size: 14px;
@@ -461,12 +381,10 @@ a.navbar-brand {
             line-height: 24px;
             margin-bottom: 45px;
         }
-        & > p:nth-child(3) {
+        &>p:nth-child(3) {
             color: #373737;
         }
-
         .about-name-container {
-            // border: 1px solid rosybrown;
             font-weight: bold;
             text-transform: uppercase;
             color: #444444;
@@ -485,21 +403,19 @@ a.navbar-brand {
             padding: 2px;
             margin-bottom: 35px;
             .about-scale {
+                transition: 2s ease;
                 background-color: #009dda;
                 height: 3px;
-                width: 79%;
+                width: 0;
             }
         }
-
     }
     .about-right {
         vertical-align: top;
         display: inline-block;
         width: 50%;
-        // border: 1px solid tomato;
         height: 100%;
         background: url("../images/ipad-mockup.png") no-repeat center;
-        
     }
     @media screen and (max-width: 1024px) {
         .about-left {
@@ -509,12 +425,7 @@ a.navbar-brand {
             display: none;
         }
     }
-
 }
-
-
-
-
 
 // CONTACT SECTION
 #contact {
@@ -531,35 +442,36 @@ a.navbar-brand {
             color: #232323;
         }
     }
-    & > p {
+    &>p {
         max-width: 700px;
         margin: auto;
         font-size: 14px;
         color: #999999;
         line-height: 24px;
         margin-bottom: 72px;
-    } 
+    }
 }
+
 .map-container {
     position: relative;
 }
 
-
-
 #map {
     min-height: 634px;
-    
 }
 
 #form-container {
-    ::placeholder {
+     ::placeholder {
         color: #b7b7b7;
     }
     position: absolute;
     font-size: 16px;
     width: 946px;
     height: 434px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0,
+    0,
+    0,
+    0.7);
     margin: auto;
     top:0;
     bottom:0;
@@ -570,17 +482,12 @@ a.navbar-brand {
     form {
         display: inline-block;
         width: 500px;
-        vertical-align: top;
-        // border: 1px solid blue;
-
-        & > div {
+        vertical-align: top; 
+        &>div {
             width: 489px;
-            
-            // border: 1px solid darkcyan;
             @include clearfix;
         }
     }
-
     input[type=text] {
         border: 1px solid #b7b7b7;
         background-color: transparent;
@@ -589,7 +496,6 @@ a.navbar-brand {
         line-height: 50px;
         width: 238px;
         margin-right: 10px;
-        
     }
     input[name=emails] {
         border: 1px solid #b7b7b7;
@@ -611,33 +517,23 @@ a.navbar-brand {
         height: 144px;
         margin-bottom: 7px;
     }
-
     input[type=submit] {
         border: 1px solid #ffff00;
         background-color: #ffff00;
         height: 48px;
         width: 120px;
         cursor: pointer;
-        // display: inline-block;
-        // vertical-align: bottom;
         float: right;
         color: #373737;
     }
-
-    & > div {
-        // border: 1px solid red;
+    &>div {
         display: inline-block;
         vertical-align: top;
-        // color: red;
-        // float: right;
         width: 200px;
         color: #f3f3f3;
-        // font-weight: bolder;
         margin-left: 80px;
-
         p {
             margin: 0;
-
         }
     }
 }
@@ -646,7 +542,6 @@ a.navbar-brand {
     #map {
         min-height: 660px;
     }
-
     #form-container {
         width: 400px;
         height: 660px;
@@ -654,7 +549,7 @@ a.navbar-brand {
         form {
             display: block;
             width: 100%;
-            & > div {
+            &>div {
                 width: 100%;
             }
         }
@@ -670,16 +565,13 @@ a.navbar-brand {
             float: none;
             display: block;
         }
-        & > div {
+        &>div {
             margin: 0;
             margin-top: 23px;
             text-align: center;
             width: 100%;
-
         }
     }
-   
-
 }
 
 .checkbox-container {
@@ -689,60 +581,45 @@ a.navbar-brand {
     margin-bottom: 0px;
     cursor: pointer;
     user-select: none;
-    // vertical-align: bottom;
     margin-top: 23px;
-   
 }
+
 @media screen and (max-width: 1024px) {
     .checkbox-container {
         display: block;
         margin-top: 0px;
     }
-
 }
 
-/* Hide the browser's default checkbox */
 .checkbox-container input {
     position: absolute;
     opacity: 0;
-  
 }
 
-/* Create a custom checkbox */
 .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
-
     background-color: transparent;
     border: 1px solid #b7b7b7;
 }
 
-/* On mouse-over, add a grey background color */
-// .checkbox-container:hover input ~ .checkmark {
-//     background-color: white;
-// }
-
-/* When the checkbox is checked, add a blue background */
-.checkbox-container input:checked ~ .checkmark {
+.checkbox-container input:checked~.checkmark {
     background-color: transparent;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the checkmark when checked */
-.checkbox-container input:checked ~ .checkmark:after {
+.checkbox-container input:checked~.checkmark:after {
     display: block;
 }
 
-/* Style the checkmark/indicator */
 .checkbox-container .checkmark:after {
     left: 9px;
     top: 5px;
@@ -755,12 +632,6 @@ a.navbar-brand {
     transform: rotate(45deg);
 }
 
-
-
-
-
-
-
 footer {
     padding: 0 30px;
     background-color: #1a1a1a;
@@ -771,7 +642,6 @@ footer {
         margin: 0;
         line-height: 60px;
         float: left;
-       
     }
     div {
         float: right;
@@ -780,9 +650,7 @@ footer {
             margin-left: 20px;
         }
     }
-
 }
-
 
 @media screen and (max-width: 600px) {
     footer {
@@ -790,17 +658,13 @@ footer {
         p {
             float: none;
             text-align: center;
-        
         }
         div {
             float: none;
-            
             text-align: center;
             a {
-            
                 margin: 0 10px;
             }
         }
     }
-    
 }
