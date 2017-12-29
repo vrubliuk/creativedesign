@@ -3,6 +3,7 @@
   src: url("BEYNO.ttf"); }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif; }
   *:focus {
@@ -14,11 +15,22 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  min-width: 400px;
+  overflow-x: hidden; }
+
+@media screen and (max-width: 420px) {
+  body {
+    overflow-x: auto; } }
 
 header {
   height: 73px;
-  background-color: white; }
+  background-color: white;
+  padding: 0 !important; }
+
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 0 !important; } }
 
 .navbar {
   background-color: white !important; }
@@ -35,6 +47,8 @@ a.navbar-brand {
 .nav-item {
   font-size: 16px;
   margin-right: 30px; }
+  .nav-item a.active {
+    color: #232323 !important; }
   .nav-item .form-control {
     border-radius: 0;
     background-color: #e8e4f1;
@@ -55,6 +69,7 @@ a.navbar-brand {
 #carousel {
   height: 100vh; }
   #carousel img {
+    -o-object-fit: cover;
     object-fit: cover; }
   #carousel .carousel_text {
     position: absolute;
@@ -64,12 +79,10 @@ a.navbar-brand {
     right: 0;
     top: 0;
     bottom: 0;
-    display: -ms-grid;
     display: grid;
-    -webkit-justify-content: center;
+    -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
     text-align: center; }
@@ -98,7 +111,7 @@ a.navbar-brand {
 
 .carousel-control-container {
   background-color: rgba(255, 255, 255, 0.3);
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 30px; }
@@ -123,22 +136,24 @@ a.navbar-brand {
     margin-bottom: 72px; }
 
 .home-flex-container {
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
+  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1024px) {
   .home-flex-container {
-    -webkit-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
 
@@ -152,7 +167,19 @@ a.navbar-brand {
   .home-card-container .home-card-container-main-image {
     margin: auto;
     display: block;
-    margin-top: 35px; }
+    margin-top: 35px;
+    width: 60px;
+    height: 60px; }
+  .home-card-container:nth-child(1) > .home-card-container-main-image {
+    background: url("../images/home1.png") no-repeat center; }
+  .home-card-container:nth-child(2) > .home-card-container-main-image {
+    background: url("../images/home2.png") no-repeat center; }
+  .home-card-container:nth-child(3) > .home-card-container-main-image {
+    background: url("../images/home3.png") no-repeat center; }
+  .home-card-container:nth-child(4) > .home-card-container-main-image {
+    background: url("../images/home4.png") no-repeat center; }
+  .home-card-container:nth-child(5) > .home-card-container-main-image {
+    background: url("../images/home5.png") no-repeat center; }
   .home-card-container > h5 {
     margin-top: 45px;
     font-size: 14px !important;
@@ -178,6 +205,8 @@ a.navbar-brand {
   overflow: hidden;
   width: 100%;
   height: 0px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
   background-color: #503392;
   color: white; }
@@ -227,30 +256,25 @@ a.navbar-brand {
     min-height: 679px; }
   #products .products-grid-container {
     min-height: 631px;
-    display: -ms-grid;
     display: grid;
-    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-grid-columns: auto auto auto;
     grid-template-columns: auto auto auto;
-    -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
-    border: solid 1px red;
     padding: 0;
-    grid-row-gap: 50px; }
-  @media screen and (max-width: 1140px) {
+    grid-row-gap: 50px;
+    margin-top: -21px; }
+  @media screen and (max-width: 1024px) {
     #products .products-grid-container {
-      -ms-grid-columns: auto;
       grid-template-columns: auto;
-      -webkit-justify-content: center;
+      -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
     #products .products-tile-container:last-child {
       margin-bottom: 35px; } }
   #products .products-tile-container {
-    border: solid 1px grey;
     width: 350px;
     height: 150px;
     display: inline-block;
@@ -260,11 +284,82 @@ a.navbar-brand {
       width: 145px;
       float: left; }
     #products .products-tile-container div {
-      margin-left: 170px; }
+      margin-top: 20px;
+      margin-left: 170px;
+      text-align: left; }
+      #products .products-tile-container div h3 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #232323;
+        font-weight: bold; }
+      #products .products-tile-container div h6 {
+        font-size: 16px;
+        color: #503392; }
+      #products .products-tile-container div p {
+        font-size: 14px;
+        color: #373737;
+        line-height: 24px; }
 
 #about {
-  height: 800px;
-  padding-top: 70px; }
+  height: 820px;
+  padding-top: 70px;
+  font-size: 0; }
+  #about .about-left {
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    font-size: 13px; }
+    #about .about-left h1 {
+      font-size: 35px !important;
+      margin-top: 40px;
+      margin-bottom: 22px;
+      color: #232323;
+      text-transform: uppercase;
+      font-weight: bold; }
+      #about .about-left h1 span {
+        color: #009dda; }
+    #about .about-left > p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 14px;
+      color: #999999;
+      line-height: 24px;
+      margin-bottom: 45px; }
+    #about .about-left > p:nth-child(3) {
+      color: #373737; }
+    #about .about-left .about-name-container {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #444444;
+      margin-bottom: 10px; }
+      #about .about-left .about-name-container::after {
+        display: block;
+        content: "";
+        clear: both; }
+      #about .about-left .about-name-container .about-name {
+        float: left; }
+      #about .about-left .about-name-container .about-percentage {
+        float: right; }
+    #about .about-left .about-scale-container {
+      height: 9px;
+      border: 1px solid #dddddd;
+      padding: 2px;
+      margin-bottom: 35px; }
+      #about .about-left .about-scale-container .about-scale {
+        background-color: #009dda;
+        height: 3px;
+        width: 79%; }
+  #about .about-right {
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background: url("../images/ipad-mockup.png") no-repeat center; }
+  @media screen and (max-width: 1024px) {
+    #about .about-left {
+      width: 100%; }
+    #about .about-right {
+      display: none; } }
 
 #contact {
   padding: 0;
@@ -290,70 +385,125 @@ a.navbar-brand {
   position: relative; }
 
 #map {
-  min-height: 600px; }
-
-::-webkit-input-placeholder {
-  color: white; }
-
-::-moz-placeholder {
-  color: white; }
-
-:-ms-input-placeholder {
-  color: white; }
-
-::placeholder {
-  color: white; }
+  min-height: 634px; }
 
 #form-container {
   position: absolute;
-  width: 900px;
-  height: 400px;
+  font-size: 16px;
+  width: 946px;
+  height: 434px;
   background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  color: white; }
+  color: #b7b7b7;
+  padding: 82px 68px; }
+  #form-container ::-webkit-input-placeholder {
+    color: #b7b7b7; }
+  #form-container :-ms-input-placeholder {
+    color: #b7b7b7; }
+  #form-container ::-ms-input-placeholder {
+    color: #b7b7b7; }
+  #form-container ::placeholder {
+    color: #b7b7b7; }
   #form-container form {
     display: inline-block;
-    vertical-align: middle; }
+    width: 500px;
+    vertical-align: top; }
+    #form-container form > div {
+      width: 489px; }
+      #form-container form > div::after {
+        display: block;
+        content: "";
+        clear: both; }
   #form-container input[type=text] {
-    border: 1px solid white;
+    border: 1px solid #b7b7b7;
     background-color: transparent;
-    padding: 10px;
-    color: white; }
+    padding: 0 10px;
+    color: #b7b7b7;
+    line-height: 50px;
+    width: 238px;
+    margin-right: 10px; }
   #form-container input[name=emails] {
-    border: 1px solid white;
+    border: 1px solid #b7b7b7;
     background-color: transparent;
-    padding: 10px;
-    color: white; }
+    padding: 0 10px;
+    color: #b7b7b7;
+    line-height: 50px;
+    width: 238px; }
   #form-container textarea {
-    border: 1px solid white;
+    border: 1px solid #b7b7b7;
     background-color: transparent;
     overflow: hidden;
-    color: white;
+    color: #b7b7b7;
     padding: 10px;
-    resize: none; }
+    resize: none;
+    width: 489px;
+    margin-top: 13px;
+    height: 144px;
+    margin-bottom: 7px; }
   #form-container input[type=submit] {
-    border: none;
-    background-color: yellow;
-    padding: 10px;
-    float: right; }
+    border: 1px solid #ffff00;
+    background-color: #ffff00;
+    height: 48px;
+    width: 120px;
+    cursor: pointer;
+    float: right;
+    color: #373737; }
   #form-container > div {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: top;
+    width: 200px;
+    color: #f3f3f3;
+    margin-left: 80px; }
+    #form-container > div p {
+      margin: 0; }
+
+@media screen and (max-width: 1024px) {
+  #map {
+    min-height: 660px; }
+  #form-container {
+    width: 400px;
+    height: 660px;
+    padding: 20px 15px; }
+    #form-container form {
+      display: block;
+      width: 100%; }
+      #form-container form > div {
+        width: 100%; }
+    #form-container input[type=text] {
+      display: block;
+      margin-bottom: 13px; }
+    #form-container textarea {
+      width: 100%; }
+    #form-container input[type=submit] {
+      margin-top: 14px;
+      float: none;
+      display: block; }
+    #form-container > div {
+      margin: 0;
+      margin-top: 23px;
+      text-align: center;
+      width: 100%; } }
 
 .checkbox-container {
   display: inline-block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  margin-top: 23px; }
+
+@media screen and (max-width: 1024px) {
+  .checkbox-container {
+    display: block;
+    margin-top: 0px; } }
 
 /* Hide the browser's default checkbox */
 .checkbox-container input {
@@ -368,7 +518,7 @@ a.navbar-brand {
   height: 25px;
   width: 25px;
   background-color: transparent;
-  border: 1px solid white; }
+  border: 1px solid #b7b7b7; }
 
 /* On mouse-over, add a grey background color */
 /* When the checkbox is checked, add a blue background */
@@ -391,8 +541,39 @@ a.navbar-brand {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: 1px solid #b7b7b7;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
+
+footer {
+  padding: 0 30px;
+  background-color: #1a1a1a; }
+  footer::after {
+    display: block;
+    content: "";
+    clear: both; }
+  footer p {
+    color: #7a7a7a;
+    font-size: 16px;
+    margin: 0;
+    line-height: 60px;
+    float: left; }
+  footer div {
+    float: right;
+    line-height: 60px; }
+    footer div a {
+      margin-left: 20px; }
+
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 0 15px; }
+    footer p {
+      float: none;
+      text-align: center; }
+    footer div {
+      float: none;
+      text-align: center; }
+      footer div a {
+        margin: 0 10px; } }

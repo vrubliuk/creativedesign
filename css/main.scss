@@ -32,13 +32,30 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    min-width: 400px;
+    overflow-x: hidden; 
    
 }
+@media screen and (max-width: 420px) {
+    body {
+        overflow-x: auto; 
+    }
+ 
+}
+
+
+
 
 header {
     // border: solid 5px #009dda;
     height: 73px;
     background-color: white;
+    padding: 0 !important;
+}
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0 !important;
+    }
  
 }
 
@@ -66,6 +83,11 @@ a.navbar-brand {
 .nav-item {
     font-size: 16px;
     margin-right: 30px;
+    a.active {
+            color: #232323 !important;  
+    }
+
+
 
     .form-control {
         border-radius: 0;
@@ -187,7 +209,7 @@ a.navbar-brand {
     align-items: center;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1024px) {
     .home-flex-container {
         flex-direction: column;
     }
@@ -204,7 +226,28 @@ a.navbar-brand {
         margin: auto;
         display: block;
         margin-top: 35px;
+        width: 60px;
+        height: 60px;
     }
+    &:nth-child(1) > .home-card-container-main-image {
+        background: url('../images/home1.png') no-repeat center;
+    }
+    &:nth-child(2) > .home-card-container-main-image {
+        background: url('../images/home2.png') no-repeat center;
+    }
+    &:nth-child(3) > .home-card-container-main-image {
+        background: url('../images/home3.png') no-repeat center;
+    }
+    &:nth-child(4) > .home-card-container-main-image {
+        background: url('../images/home4.png') no-repeat center;
+    }
+    &:nth-child(5) > .home-card-container-main-image {
+        background: url('../images/home5.png') no-repeat center;
+    }
+
+
+
+
     & > h5 {
         margin-top: 45px;
         font-size: 14px !important;
@@ -325,12 +368,13 @@ a.navbar-brand {
         justify-content: space-between;
         grid-template-columns: auto auto auto;
         align-content: center;
-        border: solid 1px red;
+        // border: solid 1px red;
         padding: 0;
         grid-row-gap: 50px;
+        margin-top: -21px;
     }
 
-    @media screen and (max-width: 1140px) {
+    @media screen and (max-width: 1024px) {
         .products-grid-container  {
             grid-template-columns: auto;
             justify-content: center;
@@ -341,7 +385,7 @@ a.navbar-brand {
     }
 
     .products-tile-container {
-        border: solid 1px grey;
+        // border: solid 1px grey;
         width: 350px;
         height: 150px;
         display: inline-block;
@@ -352,15 +396,125 @@ a.navbar-brand {
             float: left;
         }
         div {
+            margin-top: 20px;
             margin-left:170px;
+            text-align: left;
+            h3 {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #232323;
+                font-weight: bold;
+            }
+            h6 {
+                font-size: 16px;
+                color: #503392;
+
+            }
+            p {
+                font-size: 14px;
+                color: #373737;
+                line-height: 24px;
+            }
+
         }
+        
     }  
 }
 
+
+
+
+
+// ABOUT SECTION
 #about {
-    height: 800px;
+    height: 820px;
     padding-top: 70px;
+    font-size: 0;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    .about-left {
+    //     padding-left: 15px;
+    // padding-right: 15px;
+        vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        font-size: 13px;
+        // border: 1px solid rosybrown;
+        h1 {
+            font-size: 35px !important;
+            margin-top: 40px;
+            margin-bottom: 22px;
+         
+            color: #232323;
+            text-transform: uppercase;
+            font-weight: bold;
+            span {
+               
+                color: #009dda;
+            }
+        }
+        & > p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 14px;
+            color: #999999;
+            line-height: 24px;
+            margin-bottom: 45px;
+        }
+        & > p:nth-child(3) {
+            color: #373737;
+        }
+
+        .about-name-container {
+            // border: 1px solid rosybrown;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #444444;
+            margin-bottom: 10px;
+            @include clearfix;
+            .about-name {
+                float: left;
+            }
+            .about-percentage {
+                float: right;
+            }
+        }
+        .about-scale-container {
+            height: 9px;
+            border: 1px solid #dddddd;
+            padding: 2px;
+            margin-bottom: 35px;
+            .about-scale {
+                background-color: #009dda;
+                height: 3px;
+                width: 79%;
+            }
+        }
+
+    }
+    .about-right {
+        vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        // border: 1px solid tomato;
+        height: 100%;
+        background: url("../images/ipad-mockup.png") no-repeat center;
+        
+    }
+    @media screen and (max-width: 1024px) {
+        .about-left {
+            width: 100%;
+        }
+        .about-right {
+            display: none;
+        }
+    }
+
 }
+
+
+
+
 
 // CONTACT SECTION
 #contact {
@@ -393,63 +547,138 @@ a.navbar-brand {
 
 
 #map {
-    min-height: 600px;
+    min-height: 634px;
     
 }
-::placeholder {
-    color: white;
-}
+
 #form-container {
+    ::placeholder {
+        color: #b7b7b7;
+    }
     position: absolute;
-    width: 900px;
-    height: 400px;
+    font-size: 16px;
+    width: 946px;
+    height: 434px;
     background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
     top:0;
     bottom:0;
     left:0;
     right:0;
-    color: white;
+    color: #b7b7b7;
+    padding: 82px 68px;
     form {
         display: inline-block;
-        vertical-align: middle;
+        width: 500px;
+        vertical-align: top;
+        // border: 1px solid blue;
+
+        & > div {
+            width: 489px;
+            
+            // border: 1px solid darkcyan;
+            @include clearfix;
+        }
     }
 
     input[type=text] {
-        border: 1px solid white;
+        border: 1px solid #b7b7b7;
         background-color: transparent;
-        padding: 10px;
-        color: white;
+        padding: 0 10px;
+        color: #b7b7b7;
+        line-height: 50px;
+        width: 238px;
+        margin-right: 10px;
+        
     }
     input[name=emails] {
-        border: 1px solid white;
+        border: 1px solid #b7b7b7;
         background-color: transparent;
-        padding: 10px;
-        color: white;
+        padding: 0 10px;
+        color: #b7b7b7;
+        line-height: 50px;
+        width: 238px;
     }
     textarea {
-        border: 1px solid white;
+        border: 1px solid #b7b7b7;
         background-color: transparent;
         overflow: hidden;
-        color: white;
+        color: #b7b7b7;
         padding: 10px;
         resize: none;
+        width: 489px;
+        margin-top: 13px;
+        height: 144px;
+        margin-bottom: 7px;
     }
 
     input[type=submit] {
-        border: none;
-        background-color: yellow;
-        padding: 10px;
+        border: 1px solid #ffff00;
+        background-color: #ffff00;
+        height: 48px;
+        width: 120px;
+        cursor: pointer;
+        // display: inline-block;
+        // vertical-align: bottom;
         float: right;
+        color: #373737;
     }
 
     & > div {
+        // border: 1px solid red;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
+        // color: red;
+        // float: right;
+        width: 200px;
+        color: #f3f3f3;
+        // font-weight: bolder;
+        margin-left: 80px;
+
+        p {
+            margin: 0;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #map {
+        min-height: 660px;
     }
 
+    #form-container {
+        width: 400px;
+        height: 660px;
+        padding: 20px 15px;
+        form {
+            display: block;
+            width: 100%;
+            & > div {
+                width: 100%;
+            }
+        }
+        input[type=text] {
+            display: block;
+            margin-bottom: 13px;
+        }
+        textarea {
+            width: 100%;
+        }
+        input[type=submit] {
+            margin-top: 14px;
+            float: none;
+            display: block;
+        }
+        & > div {
+            margin: 0;
+            margin-top: 23px;
+            text-align: center;
+            width: 100%;
 
-
+        }
+    }
+   
 
 }
 
@@ -457,9 +686,19 @@ a.navbar-brand {
     display: inline-block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     cursor: pointer;
     user-select: none;
+    // vertical-align: bottom;
+    margin-top: 23px;
+   
+}
+@media screen and (max-width: 1024px) {
+    .checkbox-container {
+        display: block;
+        margin-top: 0px;
+    }
+
 }
 
 /* Hide the browser's default checkbox */
@@ -478,7 +717,7 @@ a.navbar-brand {
     width: 25px;
 
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #b7b7b7;
 }
 
 /* On mouse-over, add a grey background color */
@@ -509,9 +748,59 @@ a.navbar-brand {
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: 1px solid #b7b7b7;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+footer {
+    padding: 0 30px;
+    background-color: #1a1a1a;
+    @include clearfix;
+    p {
+        color: #7a7a7a;
+        font-size: 16px;
+        margin: 0;
+        line-height: 60px;
+        float: left;
+       
+    }
+    div {
+        float: right;
+        line-height: 60px;
+        a {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        padding: 0 15px;
+        p {
+            float: none;
+            text-align: center;
+        
+        }
+        div {
+            float: none;
+            
+            text-align: center;
+            a {
+            
+                margin: 0 10px;
+            }
+        }
+    }
+    
 }
