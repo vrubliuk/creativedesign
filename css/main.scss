@@ -36,10 +36,28 @@ body {
     }
 }
 
+#ie-cover {
+    display: none;
+    position: fixed;
+    z-index: 999 !important;
+    width: 100%;
+    height: 100%;
+    color: #009dda;
+    background-color: white;
+    p {
+        text-align: center;
+        font-size: 24px;
+        a {
+            color: #503392;
+        }
+    }
+}
+
 header {
     height: 73px;
     background-color: white;
     padding: 0 !important;
+    z-index: 900 !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -61,6 +79,13 @@ a.navbar-brand {
     span:nth-child(2) {
         color: #009dda;
         font-family: beyno;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -86,6 +111,21 @@ a.navbar-brand {
         outline: none;
     }
 }
+
+@media only screen and (min-width: 991px) {
+    .nav-item {
+        & > a {
+            line-height: 73px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .input-group {
+        padding: 18px 0;
+    }
+}
+
+
 
 .nav-item:last-child {
     margin-right: 0px;
@@ -403,7 +443,7 @@ a.navbar-brand {
             padding: 2px;
             margin-bottom: 35px;
             .about-scale {
-                transition: 2s ease;
+                transition: 1s ease;
                 background-color: #009dda;
                 height: 3px;
                 width: 0;

@@ -1,33 +1,5 @@
-﻿
-/*=-====Bootstrapthemes.co btco-hover-menu=====*/
-
-/* .navbar-light .navbar-nav .nav-link {
-    color: rgb(64, 64, 64);
-} */
-/* .btco-hover-menu a ,  .navbar > li > a {
-    text-transform: capitalize;
-    padding: 10px 15px;
-} */
-/* .btco-hover-menu .active a,
-.btco-hover-menu .active a:focus,
-.btco-hover-menu .active a:hover,
-.btco-hover-menu li a:hover,
-.btco-hover-menu li a:focus ,
-.navbar>.show>a,  .navbar>.show>a:focus,  .navbar>.show>a:hover{
-    color: #000;
-    background: transparent;
-    outline: 0;
-} */
-
-
-
-/*submenu style start from here*/
-
-
-.dropdown-menu {
+﻿.dropdown-menu {
     padding: 0; 
-    /* margin: 0 0 0;  */
-    /* margin-top: 20px; */
     border: 0px solid transition !important;
     border: 0px solid rgba(0,0,0,.15);	
     border-radius: 0px;
@@ -36,31 +8,10 @@
 
 }
 
-/* .dropdown-menu a:visited {
-        background-color: inherit !important;
-}
-.dropdown-menu a:active {
-    background-color: inherit !important;
-} */
-
-    /* a:active,
-  a:visited {
-    background-color: none !important;
-   color: white;
-    text-decoration: none !important;
- } */
-
-
-
-
 @media only screen and (min-width: 991px) {
     .dropdown-menu {
-        /* margin-top: 16px; */
-        /* outline: 16px solid red; */
-
-        /* border-top: solid 2px #fff200; */
         background-color: rgba(0, 0, 0, 0.5);
-    
+        margin: 0;
     }
 
     .dropdown-menu li:last-child {
@@ -70,33 +21,14 @@
         padding-top: 10px;
         border-top: solid 2px #fff200;
     }
-
-
-    .space {
-        height: 14px;
-        /* border-bottom: solid 2px #fff200; */
-        background: #fff;
-    }
-
-    
-
-
     .dropdown-item {
         color: #fff;
-        /* background-color: rgba(0, 0, 0, 0.3); */
-        /* min-height: 40px; */
         padding:10px;
-        
-
     }
     .dropdown-item::before {
         content: ">";
-        
-
     }
-    
     .dropdown-item:hover {
-        /* background-color: rgba(0, 0, 0, 0.5); */
         color: #fff200;
         background: none;
     }
@@ -104,35 +36,7 @@
     .dropdown-item:hover::before {
         content: ">>";
     }
-    /* .dropdown-item:first-child {
-        margin-top: 10px;
-    } */
-
-    
-
 }
-
-
-/*first level*/
-/* .btco-hover-menu .collapse ul > li:hover > a{background: #f5f5f5;} */
-/* .btco-hover-menu .collapse ul ul > li:hover > a, .navbar .show .dropdown-menu > li > a:focus, .navbar .show .dropdown-menu > li > a:hover{background: #fff;} */
-/*second level*/
-/* .btco-hover-menu .collapse ul ul ul > li:hover > a{background: #fff;} */
-
-/*third level*/
-/* .btco-hover-menu .collapse ul ul, .btco-hover-menu .collapse ul ul.dropdown-menu {
-    background-color: rgba(0, 0, 0, 0.3);
-  
-} */
-.btco-hover-menu .collapse ul ul ul, .btco-hover-menu .collapse ul ul ul.dropdown-menu{
-    /* background:#f5f5f5 */
-}
-.btco-hover-menu .collapse ul ul ul ul, .btco-hover-menu .collapse ul ul ul ul.dropdown-menu {
-    /* background:#f5f5f5 */
-}
-
-/*Drop-down menu work on hover*/
-/* .btco-hover-menu{background: none;margin: 0;padding: 0;min-height:20px} */
 
 @media only screen and (max-width: 991px) {
     .btco-hover-menu .show > .dropdown-toggle::after{
