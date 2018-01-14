@@ -1,3 +1,3 @@
-Upqode template. No support for IE.
+Creative design template
 
-Available on: https://vrubliuk.github.io/upqode/
+Available on: https://vrubliuk.github.io/creativedesign/
